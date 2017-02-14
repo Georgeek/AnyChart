@@ -595,6 +595,7 @@ anychart.scales.StockScatterDateTime.MAJOR_INTERVALS_ = [
 /** @suppress {deprecated} */
 (function() {
   var proto = anychart.scales.StockScatterDateTime.prototype;
+  proto['maxTicksCount'] = proto.maxTicksCount;
   proto['getFullMinimum'] = proto.getFullMinimum;
   proto['getFullMaximum'] = proto.getFullMaximum;
   proto['getMinimum'] = proto.getMinimum;
