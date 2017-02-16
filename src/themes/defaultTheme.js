@@ -612,7 +612,13 @@ goog.provide('anychart.themes.defaultTheme');
       },
       'log': {
         'type': 'log',
-        'logBase': 10
+        'logBase': 10,
+        'ticks': {
+          'mode': 'log'
+        },
+        'minorTicks': {
+          'mode': 'log'
+        }
       },
       'dateTime': {
         'type': 'dateTime',
@@ -2525,6 +2531,8 @@ goog.provide('anychart.themes.defaultTheme');
       },
       'scale': {
         'type': 'linear',
+        'minimumGap': 0,
+        'maximumGap': 0,
         'ticks': {
           'minCount': 2,
           'maxCount': 5,

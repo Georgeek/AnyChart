@@ -106,16 +106,6 @@ anychart.scales.Logarithmic.prototype.determineScaleMinMax = function() {
 };
 
 
-/** @inheritDoc */
-anychart.scales.Logarithmic.prototype.createTicks = function() {
-  var ticks = anychart.scales.Logarithmic.base(this, 'createTicks');
-  ticks.suspendSignalsDispatching();
-  ticks.mode(anychart.enums.ScatterTicksMode.LOGARITHMIC);
-  ticks.resumeSignalsDispatching(false);
-  return ticks;
-};
-
-
 //----------------------------------------------------------------------------------------------------------------------
 //  Serialize & Deserialize
 //----------------------------------------------------------------------------------------------------------------------
