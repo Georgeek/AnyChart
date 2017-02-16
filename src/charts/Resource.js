@@ -1867,6 +1867,7 @@ anychart.charts.Resource.prototype.hoverPoint = function(globalIndex) {
  * Removes hover from the series or activity by index.
  * @param {(number|Array.<number>)=} opt_resourceIndex
  * @param {number=} opt_activityIndex
+ * @return {anychart.charts.Resource}
  */
 anychart.charts.Resource.prototype.unhover = function(opt_resourceIndex, opt_activityIndex) {
   var index;
@@ -1875,6 +1876,7 @@ anychart.charts.Resource.prototype.unhover = function(opt_resourceIndex, opt_act
   else
     index = NaN;
   this.state.removePointState(anychart.PointState.HOVER, index);
+  return this;
 };
 
 
@@ -1907,6 +1909,7 @@ anychart.charts.Resource.prototype.selectPoint = function(globalIndex, opt_event
  * Removes select from the series or activity by index.
  * @param {(number|Array.<number>)=} opt_resourceIndex
  * @param {number=} opt_activityIndex
+ * @return {anychart.charts.Resource}
  */
 anychart.charts.Resource.prototype.unselect = function(opt_resourceIndex, opt_activityIndex) {
   var index;
@@ -1915,6 +1918,7 @@ anychart.charts.Resource.prototype.unselect = function(opt_resourceIndex, opt_ac
   else
     index = NaN;
   this.state.removePointState(anychart.PointState.SELECT, index);
+  return this;
 };
 
 
