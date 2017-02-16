@@ -99,7 +99,7 @@ anychart.themes.merging.mergeScale = function(scaleObj, index, chartType, defaul
   }
 
   scaleType = scaleObj['type'] || defaultType;
-  var scaleDefault = anychart.themes.merging.getThemePart_(anychart.getFullTheme('defaultScaleSettings'), scaleType);
+  var scaleDefault = anychart.themes.merging.getThemePart_(anychart.getFullTheme('defaultScaleSettings'), [scaleType]);
 
   return /** @type {Object} */ (anychart.themes.merging.merge(scaleObj, scaleDefault));
 };
@@ -346,8 +346,14 @@ anychart.themes.merging.demergeScales_ = function(target, defaultObj) {
     var namePath = anychart.themes.merging.scaleEntities_[j].split('.');
     var targetPart = anychart.themes.merging.getThemePart_(target, namePath);
     if (goog.isArray(targetPart)) {
-      len = targetPart.length;
       var defaultArray = anychart.themes.merging.getThemePart_(defaultObj, namePath);
+      len = defaultArray.length;
+      for (i = 0; i < len; i++) {
+        var scaleType = defaultArray[i]['type'];
+        var scaleDefault = anychart.themes.merging.getThemePart_(anychart.getFullTheme('defaultScaleSettings'), [scaleType]);
+        defaultArray[i] = anychart.themes.merging.merge(defaultArray[i], scaleDefault);
+      }
+      len = targetPart.length;
       var success = true;
       if (goog.isArray(defaultArray) && defaultArray.length == len) {
         for (i = 0; i < len; i++) {
