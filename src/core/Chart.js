@@ -1528,7 +1528,7 @@ anychart.core.Chart.prototype.toJson = function(opt_stringify, opt_includeTheme)
  * @return {string|Node} Chart configuration.
  */
 anychart.core.Chart.prototype.toXml = function(opt_asXmlNode, opt_includeTheme) {
-  return anychart.utils.json2xml(this.toJson(false, opt_includeTheme), '', opt_asXmlNode);
+  return anychart.utils.json2xml(/** @type {Object} */(this.toJson(false, opt_includeTheme)), '', opt_asXmlNode);
 };
 
 
