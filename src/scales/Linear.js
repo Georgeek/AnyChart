@@ -310,7 +310,9 @@ anychart.scales.Linear.prototype.setupByJSON = function(config, opt_default) {
  * @return {anychart.scales.Linear} Linear scale.
  */
 anychart.scales.linear = function() {
-  return new anychart.scales.Linear();
+  var result = new anychart.scales.Linear();
+  result.setupByJSON(anychart.getFullTheme('defaultScaleSettings')['linear']);
+  return result;
 };
 
 

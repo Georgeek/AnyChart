@@ -351,7 +351,7 @@ anychart.scales.Ordinal.prototype.serialize = function() {
   var json = anychart.scales.Ordinal.base(this, 'serialize');
   if (!this.autoDomain_)
     json['values'] = this.values();
-  if (this.names_)
+  if (this.names_ && this.names_.length)
     json['names'] = this.names_;
   json['ticks'] = this.ticks().serialize();
   return json;
@@ -383,7 +383,9 @@ anychart.scales.Ordinal.prototype.setupByJSON = function(config, opt_default) {
  * @return {anychart.scales.Ordinal} Ordinal scale.
  */
 anychart.scales.ordinal = function() {
-  return new anychart.scales.Ordinal();
+  var result = new anychart.scales.Ordinal();
+  result.setupByJSON(anychart.getFullTheme('defaultScaleSettings')['ordinal']);
+  return result;
 };
 
 
