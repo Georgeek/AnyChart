@@ -2185,7 +2185,7 @@ anychart.charts.HeatMap.prototype.setupByJSON = function(config, opt_default) {
       if (goog.isString(json)) {
         json = {'type': json};
       }
-      json = anychart.themes.merging.mergeScale(json, i, type);
+      json = anychart.themes.merging.mergeScale(json, i, type, anychart.enums.ScaleTypes.ORDINAL);
       scale = anychart.scales.Base.fromString(json['type'], false);
       scale.setup(json);
       scalesInstances[i] = scale;
@@ -2197,7 +2197,7 @@ anychart.charts.HeatMap.prototype.setupByJSON = function(config, opt_default) {
       if (goog.isString(json)) {
         json = {'type': json};
       }
-      json = anychart.themes.merging.mergeScale(json, i, type);
+      json = anychart.themes.merging.mergeScale(json, i, type, anychart.enums.ScaleTypes.ORDINAL);
       scale = anychart.scales.Base.fromString(json['type'], false);
       scale.setup(json);
       scalesInstances[i] = scale;

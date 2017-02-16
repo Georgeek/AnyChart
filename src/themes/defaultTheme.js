@@ -574,6 +574,57 @@ goog.provide('anychart.themes.defaultTheme');
       'items': ['circle', 'diamond', 'square', 'triangleDown', 'triangleUp', 'diagonalCross', 'pentagon', 'cross', 'vline', 'star5', 'star4', 'trapezium', 'star7', 'star6', 'star10']
     },
 
+    'defaultScaleSettings': {
+      'linear': {
+        'maxTicksCount': 1000,
+        'inverted': false,
+        'maximum': null,
+        'minimum': null,
+        'minimumGap': 0.1,
+        'maximumGap': 0.1,
+        'softMinimum': null,
+        'softMaximum': null,
+        'ticks': {
+          'mode': 'linear',
+          'base': 0,
+          'explicit': null,
+          'minCount': 4,
+          'maxCount': 6,
+          'interval': NaN
+        },
+        'minorTicks': {
+          'mode': 'linear',
+          'base': 0,
+          'explicit': null,
+          'count': 5,
+          'interval': NaN
+        },
+        'stackMode': 'none',
+        'stickToZero': true
+      },
+      'ordinal': {
+        'type': 'ordinal',
+        'inverted': false,
+        'names': [],
+        'ticks': {
+          'maxCount': 100
+        }
+      },
+      'log': {
+        'type': 'log',
+        'logBase': 10
+      },
+      'dateTime': {
+        'type': 'dateTime',
+        'ticks': {
+          'count': 4
+        },
+        'minorTicks': {
+          'count': 4
+        }
+      }
+    },
+
     'defaultOrdinalColorScale': {
       'autoColors': function(rangesCount) {
         return global['anychart']['color']['blendedHueProgression']('#90caf9', '#01579b', rangesCount);
@@ -1774,37 +1825,10 @@ goog.provide('anychart.themes.defaultTheme');
       'isVertical': false,
       'scales': [
         {
-          'type': 'ordinal',
-          'inverted': false,
-          'names': [],
-          'ticks': {
-            // 'interval': 1,
-            'maxCount': 100
-          }
+          'type': 'ordinal'
         },
         {
-          'type': 'linear',
-          'maxTicksCount': 1000,
-          'inverted': false,
-          'maximum': null,
-          'minimum': null,
-          'minimumGap': 0.1,
-          'maximumGap': 0.1,
-          'softMinimum': null,
-          'softMaximum': null,
-          'ticks': {
-            'mode': 'linear',
-            'base': 0,
-            'minCount': 4,
-            'maxCount': 6
-          },
-          'minorTicks': {
-            'mode': 'linear',
-            'base': 0,
-            'count': 5
-          },
-          'stackMode': 'none',
-          'stickToZero': true
+          'type': 'linear'
         }
       ],
       'crosshair': {
@@ -1854,36 +1878,10 @@ goog.provide('anychart.themes.defaultTheme');
       'scales': [
         {
           'type': 'ordinal',
-          'inverted': true,
-          'names': [],
-          'ticks': {
-            // 'interval': 1,
-            'maxCount': 100
-          }
+          'inverted': true
         },
         {
-          'type': 'linear',
-          'maxTicksCount': 1000,
-          'inverted': false,
-          'maximum': null,
-          'minimum': null,
-          'minimumGap': 0.1,
-          'maximumGap': 0.1,
-          'softMinimum': null,
-          'softMaximum': null,
-          'ticks': {
-            'mode': 'linear',
-            'base': 0,
-            'minCount': 4,
-            'maxCount': 6
-          },
-          'minorTicks': {
-            'mode': 'linear',
-            'base': 0,
-            'count': 5
-          },
-          'stackMode': 'none',
-          'stickToZero': true
+          'type': 'linear'
         }
       ],
       'tooltip': {
@@ -1949,45 +1947,10 @@ goog.provide('anychart.themes.defaultTheme');
       ],
       'scales': [
         {
-          'type': 'dateTime',
-          'maxTicksCount': 1000,
-          'inverted': false,
-          'maximum': null,
-          'minimum': null,
-          'minimumGap': 0.1,
-          'maximumGap': 0.1,
-          'softMinimum': null,
-          'softMaximum': null,
-          'ticks': {
-            'count': 4
-          },
-          'minorTicks': {
-            'count': 4
-          }
+          'type': 'dateTime'
         },
         {
-          'type': 'linear',
-          'maxTicksCount': 1000,
-          'inverted': false,
-          'maximum': null,
-          'minimum': null,
-          'minimumGap': 0.1,
-          'maximumGap': 0.1,
-          'softMinimum': null,
-          'softMaximum': null,
-          'ticks': {
-            'mode': 'linear',
-            'base': 0,
-            'minCount': 4,
-            'maxCount': 6
-          },
-          'minorTicks': {
-            'mode': 'linear',
-            'base': 0,
-            'count': 5
-          },
-          'stackMode': 'none',
-          'stickToZero': true
+          'type': 'linear'
         }
       ]
     },
@@ -2003,36 +1966,10 @@ goog.provide('anychart.themes.defaultTheme');
       'scales': [
         {
           'type': 'ordinal',
-          'inverted': true,
-          'names': [],
-          'ticks': {
-            // 'interval': 1,
-            'maxCount': 100
-          }
+          'inverted': true
         },
         {
-          'type': 'linear',
-          'maxTicksCount': 1000,
-          'inverted': false,
-          'maximum': null,
-          'minimum': null,
-          'minimumGap': 0.1,
-          'maximumGap': 0.1,
-          'softMinimum': null,
-          'softMaximum': null,
-          'ticks': {
-            'mode': 'linear',
-            'base': 0,
-            'minCount': 4,
-            'maxCount': 6
-          },
-          'minorTicks': {
-            'mode': 'linear',
-            'base': 0,
-            'count': 5
-          },
-          'stackMode': 'none',
-          'stickToZero': true
+          'type': 'linear'
         }
       ],
       'tooltip': {
@@ -2057,36 +1994,10 @@ goog.provide('anychart.themes.defaultTheme');
       'scales': [
         {
           'type': 'ordinal',
-          'inverted': true,
-          'names': [],
-          'ticks': {
-            // 'interval': 1,
-            'maxCount': 100
-          }
+          'inverted': true
         },
         {
-          'type': 'linear',
-          'maxTicksCount': 1000,
-          'inverted': false,
-          'maximum': null,
-          'minimum': null,
-          'minimumGap': 0.1,
-          'maximumGap': 0.1,
-          'softMinimum': null,
-          'softMaximum': null,
-          'ticks': {
-            'mode': 'linear',
-            'base': 0,
-            'minCount': 4,
-            'maxCount': 6
-          },
-          'minorTicks': {
-            'mode': 'linear',
-            'base': 0,
-            'count': 5
-          },
-          'stackMode': 'none',
-          'stickToZero': true
+          'type': 'linear'
         }
       ],
       'tooltip': {
@@ -2421,52 +2332,10 @@ goog.provide('anychart.themes.defaultTheme');
       'textAxesMarkers': [],
       'scales': [
         {
-          'type': 'linear',
-          'maxTicksCount': 1000,
-          'inverted': false,
-          'maximum': null,
-          'minimum': null,
-          'minimumGap': 0.1,
-          'maximumGap': 0.1,
-          'softMinimum': null,
-          'softMaximum': null,
-          'ticks': {
-            'mode': 'linear',
-            'base': 0,
-            'minCount': 4,
-            'maxCount': 6
-          },
-          'minorTicks': {
-            'mode': 'linear',
-            'base': 0,
-            'count': 5
-          },
-          'stackMode': 'none',
-          'stickToZero': true
+          'type': 'linear'
         },
         {
-          'type': 'linear',
-          'maxTicksCount': 1000,
-          'inverted': false,
-          'maximum': null,
-          'minimum': null,
-          'minimumGap': 0.1,
-          'maximumGap': 0.1,
-          'softMinimum': null,
-          'softMaximum': null,
-          'ticks': {
-            'mode': 'linear',
-            'base': 0,
-            'minCount': 4,
-            'maxCount': 6
-          },
-          'minorTicks': {
-            'mode': 'linear',
-            'base': 0,
-            'count': 5
-          },
-          'stackMode': 'none',
-          'stickToZero': true
+          'type': 'linear'
         }
       ],
       'xScale': 0,
@@ -2517,37 +2386,10 @@ goog.provide('anychart.themes.defaultTheme');
       'minorGrids': [],
       'scales': [
         {
-          'type': 'ordinal',
-          'inverted': false,
-          'names': [],
-          'ticks': {
-            // 'interval': 1,
-            'maxCount': 100
-          }
+          'type': 'ordinal'
         },
         {
-          'type': 'linear',
-          'maxTicksCount': 1000,
-          'inverted': false,
-          'maximum': null,
-          'minimum': null,
-          'minimumGap': 0.1,
-          'maximumGap': 0.1,
-          'softMinimum': null,
-          'softMaximum': null,
-          'ticks': {
-            'mode': 'linear',
-            'base': 0,
-            'minCount': 4,
-            'maxCount': 6
-          },
-          'minorTicks': {
-            'mode': 'linear',
-            'base': 0,
-            'count': 5
-          },
-          'stackMode': 'none',
-          'stickToZero': true
+          'type': 'linear'
         }
       ],
       'xScale': 0,
@@ -2683,31 +2525,11 @@ goog.provide('anychart.themes.defaultTheme');
       },
       'scale': {
         'type': 'linear',
-        'maxTicksCount': 1000,
         'ticks': {
-          'mode': 'linear',
-          'base': 0,
-          'explicit': null,
           'minCount': 2,
           'maxCount': 5,
           'interval': NaN
-        },
-        'minorTicks': {
-          'mode': 'linear',
-          'base': 0,
-          'explicit': null,
-          'count': 5,
-          'interval': NaN
-        },
-        'stackMode': 'none',
-        'stickToZero': true,
-        'minimumGap': 0,
-        'maximumGap': 0,
-        'softMinimum': null,
-        'softMaximum': null,
-        'minimum': null,
-        'maximum': null,
-        'inverted': false
+        }
       },
       'ranges': [],
       'a11y': {
@@ -2775,37 +2597,10 @@ goog.provide('anychart.themes.defaultTheme');
       'textAxesMarkers': [],
       'scales': [
         {
-          'type': 'ordinal',
-          'inverted': false,
-          'names': [],
-          'ticks': {
-            // 'interval': 1,
-            'maxCount': 100
-          }
+          'type': 'ordinal'
         },
         {
-          'type': 'linear',
-          'maxTicksCount': 1000,
-          'inverted': false,
-          'maximum': null,
-          'minimum': null,
-          'minimumGap': 0.1,
-          'maximumGap': 0.1,
-          'softMinimum': null,
-          'softMaximum': null,
-          'ticks': {
-            'mode': 'linear',
-            'base': 0,
-            'minCount': 4,
-            'maxCount': 6
-          },
-          'minorTicks': {
-            'mode': 'linear',
-            'base': 0,
-            'count': 5
-          },
-          'stackMode': 'none',
-          'stickToZero': true
+          'type': 'linear'
         }
       ],
       'xScale': 0,
@@ -3345,28 +3140,7 @@ goog.provide('anychart.themes.defaultTheme');
       },
       'scales': [
         {
-          'type': 'linear',
-          'maxTicksCount': 1000,
-          'inverted': false,
-          'maximum': null,
-          'minimum': null,
-          'minimumGap': 0.1,
-          'maximumGap': 0.1,
-          'softMinimum': null,
-          'softMaximum': null,
-          'ticks': {
-            'mode': 'linear',
-            'base': 0,
-            'minCount': 4,
-            'maxCount': 6
-          },
-          'minorTicks': {
-            'mode': 'linear',
-            'base': 0,
-            'count': 5
-          },
-          'stackMode': 'none',
-          'stickToZero': true
+          'type': 'linear'
         }
       ],
 
@@ -3505,22 +3279,11 @@ goog.provide('anychart.themes.defaultTheme');
     'heatMap': {
       'scales': [
         {
-          'type': 'ordinal',
-          'inverted': false,
-          'names': [],
-          'ticks': {
-            // 'interval': 1,
-            'maxCount': 100
-          }
+          'type': 'ordinal'
         },
         {
           'type': 'ordinal',
-          'inverted': true,
-          'names': [],
-          'ticks': {
-            // 'interval': 1,
-            'maxCount': 100
-          }
+          'inverted': true
         },
         {
           'type': 'ordinalColor'
@@ -4568,28 +4331,7 @@ goog.provide('anychart.themes.defaultTheme');
         },
         'scales': [
           {
-            'type': 'linear',
-            'maxTicksCount': 1000,
-            'inverted': false,
-            'maximum': null,
-            'minimum': null,
-            'minimumGap': 0.1,
-            'maximumGap': 0.1,
-            'softMinimum': null,
-            'softMaximum': null,
-            'ticks': {
-              'mode': 'linear',
-              'base': 0,
-              'minCount': 4,
-              'maxCount': 6
-            },
-            'minorTicks': {
-              'mode': 'linear',
-              'base': 0,
-              'count': 5
-            },
-            'stackMode': 'none',
-            'stickToZero': true
+            'type': 'linear'
           }
         ],
         'yScale': 0,
