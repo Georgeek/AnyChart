@@ -2683,6 +2683,7 @@ goog.provide('anychart.themes.defaultTheme');
       },
       'scale': {
         'type': 'linear',
+        'maxTicksCount': 1000,
         'ticks': {
           'mode': 'linear',
           'base': 0,
