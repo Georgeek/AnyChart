@@ -464,8 +464,7 @@ anychart.scales.ScatterTicks.prototype.setupLogarithmic_ = function(min, max, lo
     }
     if (isNaN(interval)) {
       var currentInterval = NaN, currentDiff = NaN;
-      for (var q = minCount; q <= minCount; q++) {
-      // for (var q = minCount; q <= maxCount; q++) {
+      for (var q = minCount; q <= maxCount; q++) {
         // calculating the interval here
         var count = q - 1; // it should be valid here
         var range = max - min;

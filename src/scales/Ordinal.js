@@ -351,7 +351,7 @@ anychart.scales.Ordinal.prototype.serialize = function() {
   var json = anychart.scales.Ordinal.base(this, 'serialize');
   if (!this.autoDomain_)
     json['values'] = this.values();
-  if (this.names_ && this.names_.length)
+  if (this.names_)
     json['names'] = this.names_;
   json['ticks'] = this.ticks().serialize();
   return json;

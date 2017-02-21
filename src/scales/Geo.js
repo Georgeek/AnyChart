@@ -311,10 +311,8 @@ anychart.scales.Geo.prototype.getBounds = function() {
  * @return {anychart.scales.Geo} .
  */
 anychart.scales.Geo.prototype.setBounds = function(value) {
-  if (!goog.math.Rect.equals(this.bounds_, value)) {
-    this.bounds_ = value;
-    this.consistent = false;
-  }
+  this.bounds_ = value;
+  this.consistent = false;
   return this;
 };
 
